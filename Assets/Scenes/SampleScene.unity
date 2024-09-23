@@ -567,6 +567,10 @@ PrefabInstance:
       propertyPath: _run
       value: 304
       objectReference: {fileID: 0}
+    - target: {fileID: 1171226215777770276, guid: b4c3eab156b116d428b2973011a6d5ea, type: 3}
+      propertyPath: _runSpeed
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 1171226215777770277, guid: b4c3eab156b116d428b2973011a6d5ea, type: 3}
       propertyPath: m_Name
       value: Player

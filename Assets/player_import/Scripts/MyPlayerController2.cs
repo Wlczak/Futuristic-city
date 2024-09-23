@@ -18,6 +18,7 @@ public class MyPlayerController2 : MonoBehaviour
     public float _rotationSpeed = 10.0f;
     public float _gravity = 20.0f;
     public KeyCode _run;
+    public KeyCode _flyDown;
 
     private Vector3 moveDirection = Vector3.zero;
 
@@ -40,8 +41,8 @@ public class MyPlayerController2 : MonoBehaviour
 
         yaw += Input.GetAxis("Mouse X") * _rotationSpeed;
 
-        if (characterController.isGrounded)
-        {
+       /* if (characterController.isGrounded)
+        {*/
             // We are grounded, so recalculate
             // move direction directly from axes
 
@@ -59,11 +60,15 @@ public class MyPlayerController2 : MonoBehaviour
             {
                 moveDirection.y = _jumpSpeed;
             }
-            
-            this.transform.localEulerAngles = new Vector3(0, yaw, 0);
+        if (Input.GetKey(_flyDown))
+        {
+            moveDirection.y = -_jumpSpeed;
+        }
+
+        this.transform.localEulerAngles = new Vector3(0, yaw, 0);
             
             moveDirection = this.transform.TransformDirection(moveDirection);            
-        }
+        //}
         
         this.transform.localEulerAngles = new Vector3(0, yaw, 0);
         _camera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
