@@ -68,3 +68,6 @@ MemoryCaptures/
 # === Unity Cloud Build ===
 /[Uu]ser[Ss]ettings/*.cloud
 /[Uu]ser[Ss]ettings/*.pubxml
+
+# === VS ===
+/.vs
