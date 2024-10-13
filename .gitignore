@@ -41,11 +41,6 @@ TextMeshPro/
 *.aar
 *.manifest
 
-# === Miscellaneous ===
-*.unitypackage
-*.prefab.meta
-*.asset.meta
-
 # === Files generated for visual scripting tools ===
 *.bolt/
 *.flow/
