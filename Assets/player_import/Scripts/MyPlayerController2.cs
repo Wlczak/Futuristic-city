@@ -8,7 +8,7 @@ public class MyPlayerController2 : MonoBehaviour
     public GameObject _camera;          // Player camera
     public GameObject car;              // Car object to follow
     public float _speed = 6.0f;
-    public float _runSpeed = 12.0f;    
+    public float _runSpeed = 12.0f;
     public float _jumpSpeed = 8.0f;
     public float _rotationSpeed = 10.0f;
     public float _gravity = 20.0f;
@@ -25,13 +25,13 @@ public class MyPlayerController2 : MonoBehaviour
     private bool isFollowingCar = false;  // Tracks whether we're in car-following mode
 
     // Camera offset for following the car
-    public Vector3 carCameraOffset = new Vector3(0, 5, -10);
+    public Vector3 carCameraOffset = new Vector3(-510, 5, -10); // Adjust values as needed
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         yaw = this.transform.localEulerAngles.y;
-        pitch = _camera.transform.localEulerAngles.z;
+        pitch = _camera.transform.localEulerAngles.x; // Changed to X for camera pitch
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -42,6 +42,13 @@ public class MyPlayerController2 : MonoBehaviour
         if (Input.GetKeyDown(switchKey))
         {
             isFollowingCar = !isFollowingCar;
+
+            if (!isFollowingCar)
+            {
+                // Reset camera position to the player when switching back
+                _camera.transform.position = this.transform.position + Vector3.up * 1.5f; // Adjust the height as needed
+                _camera.transform.rotation = Quaternion.Euler(pitch, yaw, 0); // Reset camera rotation to match player view
+            }
         }
 
         if (isFollowingCar)
@@ -65,7 +72,7 @@ public class MyPlayerController2 : MonoBehaviour
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
         float speed = _speed;
 
-        if (Input.GetKey(_run)) 
+        if (Input.GetKey(_run))
         {
             speed = _runSpeed;
         }
@@ -94,17 +101,19 @@ public class MyPlayerController2 : MonoBehaviour
     }
 
     // Handles following the car
-    // Handles following the car
-private void FollowCar()
-{
-    // Calculate the desired camera position based on the car's position and its forward direction
-    Vector3 desiredPosition = car.transform.position - car.transform.forward * -carCameraOffset.z + Vector3.up * carCameraOffset.y;
+    private void FollowCar()
+    {
+        // Get the car's forward direction
+        Vector3 carForward = car.transform.forward;
 
-    // Set the camera position to the desired position
-    _camera.transform.position = desiredPosition;
+        // Calculate the desired camera position based on the car's position, its forward direction, and the offset
+        Vector3 desiredPosition = car.transform.position - carForward * -carCameraOffset.z + Vector3.up * carCameraOffset.y + Vector3.forward * carCameraOffset.x;
 
-    // Make the camera look at the car
-    _camera.transform.LookAt(car.transform);
-}
+        // Set the camera position to the desired position
+        _camera.transform.position = desiredPosition;
+
+        // Make the camera look at the car
+        _camera.transform.LookAt(car.transform.position + Vector3.up * 1.5f); // Look at the car's position at a certain height
+    }
 
 }

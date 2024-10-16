@@ -337,6 +337,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
+      propertyPath: car
+      value: 
+      objectReference: {fileID: 421288437}
+    - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
       propertyPath: _runSpeed
       value: 150
       objectReference: {fileID: 0}
@@ -27909,6 +27913,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &421288437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 765519404554619890, guid: ee173ba0108b8c041b757a70073f0fb5, type: 3}
+  m_PrefabInstance: {fileID: 406594782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &480250089
 Mesh:
   m_ObjectHideFlags: 0
