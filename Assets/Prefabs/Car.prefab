@@ -752,7 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1796306055807880088}
   - component: {fileID: 7656403308281793468}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: headlight right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5038,7 +5038,7 @@ GameObject:
   - component: {fileID: 6477321156544866540}
   - component: {fileID: 5800503334339270148}
   - component: {fileID: 2329911713651684213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: backlight cube right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7238,7 +7238,7 @@ GameObject:
   - component: {fileID: 5554197984775648968}
   - component: {fileID: 7126058355070114460}
   - component: {fileID: 7502771080547815734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: headlight cube left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7341,7 +7341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6152504193350973988}
   - component: {fileID: 711160212167946946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: backlight left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7435,7 +7435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4720959513634899871}
   - component: {fileID: 5380575399077979579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: backlight right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7529,7 +7529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8427050004063119356}
   - component: {fileID: 6566535192806687095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: headlight left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7625,7 +7625,7 @@ GameObject:
   - component: {fileID: 6224494627010460945}
   - component: {fileID: 4294952546899157387}
   - component: {fileID: 3308757058122027034}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: headlight cube right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7765,7 +7765,7 @@ GameObject:
   - component: {fileID: 276595543045207213}
   - component: {fileID: 7447174486087339053}
   - component: {fileID: 5307437371227821230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: backlight cube left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
