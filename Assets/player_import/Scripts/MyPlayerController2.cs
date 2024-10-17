@@ -64,9 +64,9 @@ public class MyPlayerController2 : MonoBehaviour
     {
         pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * _rotationSpeed, -90, 90);
         yaw += Input.GetAxis("Mouse X") * _rotationSpeed;
-if (!isFollowingCar)
+        if (!isFollowingCar)
         {
-        
+
 
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
@@ -89,7 +89,7 @@ if (!isFollowingCar)
             }
 
             this.transform.localEulerAngles = new Vector3(0, yaw, 0);
-            
+
             moveDirection = this.transform.TransformDirection(moveDirection);
 
             _camera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
@@ -119,7 +119,7 @@ if (!isFollowingCar)
         _camera.transform.position = desiredPosition;
 
         // Make the camera look at the car
-        _camera.transform.LookAt(car.transform.position + Vector3.up * 1.5f- carLeft*carCameraOffset.x); // Look at the car's position at a certain height
+        _camera.transform.LookAt(car.transform.position + Vector3.up * 1.5f - carLeft * carCameraOffset.x); // Look at the car's position at a certain height
     }
 
 }
