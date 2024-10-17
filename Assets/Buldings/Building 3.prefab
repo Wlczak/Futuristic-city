@@ -777,7 +777,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 2
     m_ManualUV: 0
     elementGroup: 0
     m_TextureGroup: 4
@@ -879,7 +879,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 2
     m_ManualUV: 0
     elementGroup: 0
     m_TextureGroup: 6
@@ -981,7 +981,7 @@ MonoBehaviour:
       m_Rotation: 0
       m_Anchor: 9
     m_Material: {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
-    m_SubmeshIndex: 0
+    m_SubmeshIndex: 2
     m_ManualUV: 0
     elementGroup: 0
     m_TextureGroup: 8
@@ -2277,11 +2277,23 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 7775
+  m_VersionIndex: 7783
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 2a00000036000000
+  m_SelectedEdges:
+  - a: 126
+    b: 127
+  - a: 127
+    b: 128
+  - a: 128
+    b: 126
+  - a: 162
+    b: 163
+  - a: 163
+    b: 164
+  - a: 164
+    b: 162
+  m_SelectedVertices: 7e0000007f00000080000000a2000000a3000000a4000000
 --- !u!114 &9177177868826409186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2339,6 +2351,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 1c57d3562741a6b4cac9dc59be33533c, type: 2}
   - {fileID: 2100000, guid: 4e165c2f6b99a4945ae33127162f0933, type: 2}
+  - {fileID: 2100000, guid: e57d03e1d6677124b89e63d5951b518e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
