@@ -56,11 +56,7 @@ public class MyPlayerController2 : MonoBehaviour
             // If in car-following mode, move the camera behind the car
             FollowCar();
         }
-        else
-        {
-            // Otherwise, control the player
-            ControlPlayer();
-        }
+        ControlPlayer();
     }
 
     // Handles player control
@@ -68,36 +64,42 @@ public class MyPlayerController2 : MonoBehaviour
     {
         pitch = Mathf.Clamp(pitch - Input.GetAxis("Mouse Y") * _rotationSpeed, -90, 90);
         yaw += Input.GetAxis("Mouse X") * _rotationSpeed;
-
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-        float speed = _speed;
-
-        if (Input.GetKey(_run))
+if (!isFollowingCar)
         {
-            speed = _runSpeed;
+        
+
+
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+            float speed = _speed;
+
+            if (Input.GetKey(_run))
+            {
+                speed = _runSpeed;
+            }
+
+            moveDirection *= speed;
+
+            if (Input.GetButton("Jump"))
+            {
+                moveDirection.y = _jumpSpeed;
+            }
+            if (Input.GetKey(_flyDown))
+            {
+                moveDirection.y = -_jumpSpeed;
+            }
+
+            this.transform.localEulerAngles = new Vector3(0, yaw, 0);
+            
+            moveDirection = this.transform.TransformDirection(moveDirection);
+
+            _camera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
+
+            // Apply gravity
+            moveDirection.y -= _gravity * Time.deltaTime;
+
+            // Move the player controller
+            characterController.Move(moveDirection * Time.deltaTime);
         }
-
-        moveDirection *= speed;
-
-        if (Input.GetButton("Jump"))
-        {
-            moveDirection.y = _jumpSpeed;
-        }
-        if (Input.GetKey(_flyDown))
-        {
-            moveDirection.y = -_jumpSpeed;
-        }
-
-        this.transform.localEulerAngles = new Vector3(0, yaw, 0);
-        moveDirection = this.transform.TransformDirection(moveDirection);
-
-        _camera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
-
-        // Apply gravity
-        moveDirection.y -= _gravity * Time.deltaTime;
-
-        // Move the player controller
-        characterController.Move(moveDirection * Time.deltaTime);
     }
 
     // Handles following the car
