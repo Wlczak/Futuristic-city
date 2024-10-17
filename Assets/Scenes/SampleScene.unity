@@ -344,6 +344,18 @@ PrefabInstance:
       propertyPath: _runSpeed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
+      propertyPath: carCameraOffset.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
+      propertyPath: carCameraOffset.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
+      propertyPath: carCameraOffset.z
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1171226215777770277, guid: 6172406408b3dde4197733f057231eff, type: 3}
       propertyPath: m_Name
       value: Player
@@ -27667,6 +27679,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1818832972}
+    - target: {fileID: 2050263207701664587, guid: ee173ba0108b8c041b757a70073f0fb5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1111828207}
     - target: {fileID: 3061971974580467952, guid: ee173ba0108b8c041b757a70073f0fb5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -27701,7 +27717,7 @@ PrefabInstance:
       objectReference: {fileID: 765736701}
     - target: {fileID: 7811160596455068946, guid: ee173ba0108b8c041b757a70073f0fb5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5151453
+      value: -6.35
       objectReference: {fileID: 0}
     - target: {fileID: 7811160596455068946, guid: ee173ba0108b8c041b757a70073f0fb5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33912,6 +33928,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 549879279775931577, guid: 9962c6362e0137346afcd26ecab1c330, type: 3}
   m_PrefabInstance: {fileID: 1032809792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1111828207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1171226215777770277, guid: 6172406408b3dde4197733f057231eff, type: 3}
+  m_PrefabInstance: {fileID: 80983369}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1261073177
 Mesh:

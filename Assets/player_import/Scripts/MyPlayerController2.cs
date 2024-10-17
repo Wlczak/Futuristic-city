@@ -108,14 +108,18 @@ if (!isFollowingCar)
         // Get the car's forward direction
         Vector3 carForward = car.transform.forward;
 
+        Vector3 carRight = car.transform.right;
+
+        Vector3 carLeft = -carRight;
+
         // Calculate the desired camera position based on the car's position, its forward direction, and the offset
-        Vector3 desiredPosition = car.transform.position - carForward * -carCameraOffset.z + Vector3.up * carCameraOffset.y + Vector3.forward * carCameraOffset.x;
+        Vector3 desiredPosition = car.transform.position - carForward * carCameraOffset.z + Vector3.up * carCameraOffset.y + carRight * carCameraOffset.x;
 
         // Set the camera position to the desired position
         _camera.transform.position = desiredPosition;
 
         // Make the camera look at the car
-        _camera.transform.LookAt(car.transform.position + Vector3.up * 1.5f); // Look at the car's position at a certain height
+        _camera.transform.LookAt(car.transform.position + Vector3.up * 1.5f- carLeft*carCameraOffset.x); // Look at the car's position at a certain height
     }
 
 }
