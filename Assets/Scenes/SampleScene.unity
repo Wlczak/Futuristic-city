@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
       propertyPath: carCameraOffset.x
-      value: -4
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 1171226215777770276, guid: 6172406408b3dde4197733f057231eff, type: 3}
       propertyPath: carCameraOffset.y
