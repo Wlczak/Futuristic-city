@@ -22,10 +22,10 @@ public class MyPlayerController2 : MonoBehaviour
     private float pitch;
     private float yaw;
 
-    private bool isFollowingCar = false;  // Tracks whether we're in car-following mode
+    public bool isFollowingCar = false;  // Tracks whether we're in car-following mode
 
     // Camera offset for following the car
-    public Vector3 carCameraOffset = new Vector3(-510, 5, -10); // Adjust values as needed
+    public Vector3 carCameraOffset = new Vector3(0, 0, 0); // Adjust values as needed
 
     void Start()
     {
