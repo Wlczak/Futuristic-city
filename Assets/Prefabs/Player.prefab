@@ -443,7 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 3216969077158421257}
   car: {fileID: 0}
-  _speed: 6
+  _speed: 20
   _runSpeed: 150
   _jumpSpeed: 8
   _rotationSpeed: 10
